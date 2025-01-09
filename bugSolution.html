@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Corrected HTML</title>
+</head>
+<body>
+  <p>This is a paragraph.</p>
+  <p>This is another paragraph.</p> 
+  <p>This is a third paragraph.</p>
+  <div id="myDiv"></div>
+  <script>
+    // Correct way to add the element and its content, ensuring it exists before access
+    const newDiv = document.createElement('div');
+    newDiv.id = 'myDiv';
+    newDiv.innerHTML = "<p>This is added correctly</p>";
+    document.body.appendChild(newDiv);
+    // Now access the element safely
+    document.getElementById("myDiv").innerHTML += "<p>Additional content</p>";
+  </script>
+</body>
+</html>
