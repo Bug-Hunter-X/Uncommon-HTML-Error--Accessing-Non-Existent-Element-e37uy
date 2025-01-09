@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error</title>
+</head>
+<body>
+  <p>This is a paragraph.</p>
+  <p>This is another paragraph.</p> 
+  <p>This is a third paragraph.</p>
+  <div id="myDiv"></div>
+  <script>
+    // Attempting to access a non-existent element before it's created
+    document.getElementById("myDiv").innerHTML = "<p>This is added later</p>";
+
+    // Correct way to add the element and it's content
+    const newDiv = document.createElement('div');
+    newDiv.id = 'myDiv';
+    newDiv.innerHTML = "<p>This is added correctly</p>";
+    document.body.appendChild(newDiv);
+  </script>
+</body>
+</html>
